@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://i4tg4r0vocho"]
+
+[ext_resource type="PackedScene" uid="uid://3a0gto2asbo2" path="res://scenes/items/interactables/pickupable_template.tscn" id="1_cnuly"]
+[ext_resource type="PackedScene" uid="uid://cbhnt8p5slbuk" path="res://assets/meshes/stick.tscn" id="2_cvhg2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvhg2"]
+radius = 0.064453125
+height = 0.7459717
+
+[node name="PickupableStick" unique_id=1510676806 instance=ExtResource("1_cnuly")]
+
+[node name="Pickupable" parent="." index="0" unique_id=678589974]
+prompt = "Pickup stick"
+
+[node name="CollisionShape3D" parent="Pickupable" index="0" unique_id=415797282]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.0386225, -0.015197754)
+shape = SubResource("CapsuleShape3D_cvhg2")
+
+[node name="Stick" parent="." index="1" unique_id=647896313 instance=ExtResource("2_cvhg2")]
