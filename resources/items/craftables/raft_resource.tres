@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dwgnns8ausn4x"]
+
+[ext_resource type="Texture2D" uid="uid://krwmpvsgmx7t" path="res://assets/textures/item_icons/raft.png" id="1_5mpmc"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_3u1yq"]
+
+[resource]
+script = ExtResource("2_3u1yq")
+item_key = 18
+display_name = "Raft"
+icon = ExtResource("1_5mpmc")
+description = "A large sturdy raft."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

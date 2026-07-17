@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bsttt3u330cdp"]
+
+[ext_resource type="PackedScene" uid="uid://dpyl4uua24bp0" path="res://scenes/items/equippables/equippable_weapon_template.tscn" id="1_haxvf"]
+[ext_resource type="Script" uid="uid://bi47e7put1dfb" path="res://scripts/items/equippables/equippable_weapon.gd" id="2_akmsx"]
+[ext_resource type="PackedScene" uid="uid://c7j1611b6j0k8" path="res://assets/meshes/axe.tscn" id="2_r22vh"]
+
+[sub_resource type="Animation" id="Animation_r22vh"]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshHolder/Axe:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.30153367, 0.69996464),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.3, -0.5, -0.35), Vector3(0.42, -0.45, -0.28), Vector3(0, -0.18, -0.52), Vector3(0, -0.18, -0.52), Vector3(0.3, -0.5, -0.35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshHolder/Axe:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.30153367, 0.69996464),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.2617994, 0.2617994, 0), Vector3(-0.34906584, 1.3962634, -1.3962634), Vector3(-0.34906584, 1.3962634, -1.3962634), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_akmsx"]
+resource_name = "use_item"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshHolder/Axe:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09970628, 0.19759971, 0.30093166, 0.6970375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.3, -0.5, -0.35), Vector3(0.42, -0.45, -0.28), Vector3(0, -0.18, -0.52), Vector3(0, -0.18, -0.52), Vector3(0.3, -0.5, -0.35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshHolder/Axe:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.09789343, 0.19669329, 0.30093166, 0.6970375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.2617994, 0.2617994, 0), Vector3(-0.34906584, 1.3962634, -1.3962634), Vector3(-0.34906584, 1.3962634, -1.3962634), Vector3(0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"check_hit"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_agagq"]
+_data = {
+&"RESET": SubResource("Animation_r22vh"),
+&"use_item": SubResource("Animation_akmsx")
+}
+
+[node name="EquippableAxe" unique_id=1535181218 instance=ExtResource("1_haxvf")]
+script = ExtResource("2_akmsx")
+
+[node name="AnimationPlayer" parent="." index="0" unique_id=1566274177]
+libraries/ = SubResource("AnimationLibrary_agagq")
+
+[node name="Axe" parent="MeshHolder" parent_id_path=PackedInt32Array(1124766850) index="0" unique_id=1399281936 instance=ExtResource("2_r22vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.5, -0.35)

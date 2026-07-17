@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bgepl4dudp3ug"]
+
+[ext_resource type="Script" uid="uid://dd8nhvih2ib4d" path="res://scripts/items/equippables/equippable_item.gd" id="1_38bks"]
+
+[node name="EquippableItemTemplate" type="Node3D" unique_id=1535181218]
+script = ExtResource("1_38bks")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1566274177]
+
+[node name="MeshHolder" type="Node3D" parent="." unique_id=1124766850]
+
+[node name="HitCheckMarker" type="Marker3D" parent="." unique_id=1518742921]

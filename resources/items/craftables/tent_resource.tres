@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://cdhf2hi0q7sw"]
+
+[ext_resource type="Texture2D" uid="uid://dkf0uwrkwbchb" path="res://assets/textures/item_icons/tent.png" id="1_2omh8"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_1o3bq"]
+
+[resource]
+script = ExtResource("2_1o3bq")
+item_key = 17
+display_name = "Tent"
+icon = ExtResource("1_2omh8")
+description = "A large tent for nightime shelter."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dwjvnc7jarc2h"]
+
+[ext_resource type="Texture2D" uid="uid://cwfqeiuwticrw" path="res://assets/textures/item_icons/cooked_meat.png" id="1_iy4ws"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_uhu4c"]
+
+[resource]
+script = ExtResource("2_uhu4c")
+item_key = 9
+display_name = "Cooked Meat"
+icon = ExtResource("1_iy4ws")
+description = "Safe for humans to eat."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

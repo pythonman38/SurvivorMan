@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://bwjhfb1ane3j1"]
+
+[ext_resource type="Texture2D" uid="uid://ck8pd2eqqlu23" path="res://assets/textures/item_icons/fruit.png" id="1_3o7vt"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_46eor"]
+
+[resource]
+script = ExtResource("2_46eor")
+item_key = 4
+display_name = "Fruit"
+icon = ExtResource("1_3o7vt")
+description = "A small piece of sweet fruit."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://osdl26dg48qe" path="res://scripts/player/player.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ci8gs5wsb187t" path="res://scripts/player/interaction_ray_cast.gd" id="2_dd427"]
+[ext_resource type="Script" uid="uid://lkblthkc5ll4" path="res://scripts/player/equippable_item_holder.gd" id="3_68xwl"]
+[ext_resource type="Script" uid="uid://4wkk0eww7bag" path="res://scripts/game/inventory_manager.gd" id="3_u3rb4"]
+[ext_resource type="Script" uid="uid://dsbitqevrtlw6" path="res://scripts/game/equipped_item_manager.gd" id="4_nybob"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s3bbx"]
 radius = 0.25
@@ -24,3 +27,14 @@ target_position = Vector3(0, 0, -2)
 collision_mask = 4
 collide_with_areas = true
 script = ExtResource("2_dd427")
+
+[node name="EquippableItemHolder" type="Node3D" parent="Head" unique_id=913057223]
+script = ExtResource("3_68xwl")
+
+[node name="Managers" type="Node" parent="." unique_id=1783182741]
+
+[node name="InventoryManager" type="Node" parent="Managers" unique_id=489846319]
+script = ExtResource("3_u3rb4")
+
+[node name="EquippedItemManager" type="Node" parent="Managers" unique_id=1198344779]
+script = ExtResource("4_nybob")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://k50c125ur7cm"]
+
+[ext_resource type="Texture2D" uid="uid://bbhggchqbcmje" path="res://assets/textures/panel_blue.png" id="1_aidkj"]
+[ext_resource type="Script" uid="uid://cuwbbwx7kpak8" path="res://scripts/UI/crafting_button.gd" id="2_yftd8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3bbx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aidkj"]
+bg_color = Color(0, 0, 0, 0.15686275)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yftd8"]
+bg_color = Color(0, 0, 0, 0.078431375)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2w50"]
+bg_color = Color(0.3529412, 0.3529412, 0.3529412, 0.50980395)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="CraftingButton" type="TextureRect" unique_id=1913240268]
+custom_minimum_size = Vector2(160, 160)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aidkj")
+script = ExtResource("2_yftd8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=662438057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="IconTextureRect" type="TextureRect" parent="MarginContainer" unique_id=1576100608]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1008110034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_s3bbx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aidkj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yftd8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o2w50")

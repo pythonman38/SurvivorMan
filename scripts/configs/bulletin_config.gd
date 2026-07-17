@@ -1,11 +1,13 @@
 class_name BulletinConfig
 
 enum Keys {
-	InteractionPrompt
+	InteractionPrompt,
+	CrafingMenu
 }
 
 const BULLETIN_PATHS := {
-	Keys.InteractionPrompt: "res://scenes/UI/interaction_prompt.tscn"
+	Keys.InteractionPrompt: "res://scenes/UI/interaction_prompt.tscn",
+	Keys.CrafingMenu: "res://scenes/UI/menus/crafting_menu.tscn"
 }
 
 static func get_bulletin(key: Keys) -> Bulletin:

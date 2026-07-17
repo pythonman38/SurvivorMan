@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://bxid1j8k688vm"]
+
+[ext_resource type="Texture2D" uid="uid://byr18sik3c22t" path="res://assets/textures/item_icons/campfire.png" id="1_2a6kb"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_4jrgm"]
+
+[resource]
+script = ExtResource("2_4jrgm")
+item_key = 12
+display_name = "Campfire"
+icon = ExtResource("1_2a6kb")
+description = "Good for warmth at night and keeping the animals away.S"
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

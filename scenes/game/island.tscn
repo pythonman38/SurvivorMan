@@ -86,10 +86,16 @@ transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.70710
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.104976416, -2)
 
 [node name="PickupablePlant" parent="." unique_id=1358838159 instance=ExtResource("6_grrfr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.028320313, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.028320193, -2)
+
+[node name="PickupablePlant4" parent="." unique_id=606407727 instance=ExtResource("6_grrfr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.028320193, 0.011)
 
 [node name="PickupablePlant2" parent="." unique_id=155193513 instance=ExtResource("6_grrfr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.028320074, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.028320313, 2)
+
+[node name="PickupablePlant3" parent="." unique_id=1455578843 instance=ExtResource("6_grrfr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028320313, 2)
 
 [node name="Player" parent="." unique_id=238740755 instance=ExtResource("7_qssai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9000006, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009131432, 0.90387535, 0.021658659)

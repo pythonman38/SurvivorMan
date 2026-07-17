@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://c04ypjqt75q6m"]
+
+[ext_resource type="Texture2D" uid="uid://gblt62r5sidi" path="res://assets/textures/item_icons/raw_meat.png" id="1_1oc2t"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_ib28t"]
+
+[resource]
+script = ExtResource("2_ib28t")
+item_key = 8
+display_name = "Raw Meat"
+icon = ExtResource("1_1oc2t")
+description = "Make sure you cook this first!"
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

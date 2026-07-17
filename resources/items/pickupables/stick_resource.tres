@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dx35okltxo6r3"]
+
+[ext_resource type="Texture2D" uid="uid://det8lvyi1uw3x" path="res://assets/textures/item_icons/stick.png" id="1_8v0p5"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="1_mj3el"]
+
+[resource]
+script = ExtResource("1_mj3el")
+display_name = "Stick"
+icon = ExtResource("1_8v0p5")
+description = "A dry stick."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

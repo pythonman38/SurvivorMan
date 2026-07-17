@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dpyl4uua24bp0"]
+
+[ext_resource type="PackedScene" uid="uid://bgepl4dudp3ug" path="res://scenes/items/equippables/equippable_item_template.tscn" id="1_khiq0"]
+
+[node name="EquippableWeaponTemplate" unique_id=1535181218 instance=ExtResource("1_khiq0")]

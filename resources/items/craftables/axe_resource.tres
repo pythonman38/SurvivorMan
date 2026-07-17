@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://cht5phw4x30rr"]
+
+[ext_resource type="Texture2D" uid="uid://byrnowp3powkf" path="res://assets/textures/item_icons/axe.png" id="1_s5k6y"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_6ldie"]
+
+[resource]
+script = ExtResource("2_6ldie")
+item_key = 10
+display_name = "Axe"
+icon = ExtResource("1_s5k6y")
+description = "A useful tool in chopping wood."
+is_equippable = true
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"

@@ -8,6 +8,11 @@ extends CharacterBody3D
 
 @onready var head: Node3D = $Head
 @onready var interaction_ray_cast: RayCast3D = $Head/InteractionRayCast
+@onready var equippable_item_holder: Node3D = $Head/EquippableItemHolder
+
+func _enter_tree() -> void:
+	EventSystem.PLA_freeze_player.connect(set_freeze.bind(true))
+	EventSystem.PLA_unfreeze_player.connect(set_freeze.bind(false))
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -17,6 +22,8 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	move()
+	if Input.is_action_just_pressed("use_item"):
+		equippable_item_holder.try_to_use_item()
 	
 func move() -> void:
 	var is_sprinting: bool
@@ -42,7 +49,17 @@ func look_around(relative: Vector2) -> void:
 	rotate_y(-relative.x * mouse_sensitivity)
 	head.rotate_x(-relative.y * mouse_sensitivity)
 	head.rotation_degrees.x = clamp(head.rotation_degrees.x, -90, 90)
+	
+func set_freeze(freeze: bool) -> void:
+	set_process(!freeze)
+	set_physics_process(!freeze)
+	set_process_input(!freeze)
+	set_process_unhandled_key_input(!freeze)
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif event.is_action_pressed("open_crafting_menu"):
+		EventSystem.BUL_create_bulletin.emit(BulletinConfig.Keys.CrafingMenu)
+	elif event.is_action_pressed("item_hotkey"):
+		EventSystem.EQU_hotkey_pressed.emit(int(event.as_text()))

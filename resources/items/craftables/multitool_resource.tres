@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://g7xbtdtj6c6w"]
+
+[ext_resource type="Texture2D" uid="uid://pdk062mssy11" path="res://assets/textures/item_icons/multitool.png" id="1_wrdo7"]
+[ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_4l034"]
+
+[resource]
+script = ExtResource("2_4l034")
+item_key = 13
+display_name = "Multitool"
+icon = ExtResource("1_wrdo7")
+description = "Pocket tool for varius jobs."
+metadata/_custom_type_script = "uid://c412qpdpv0wl4"
