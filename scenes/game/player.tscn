@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://osdl26dg48qe" path="res://scripts/player/player.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ci8gs5wsb187t" path="res://scripts/player/interaction_ray_cast.gd" id="2_dd427"]
+[ext_resource type="Script" uid="uid://drfs5tvsly60r" path="res://scripts/player/main_camera.gd" id="2_wwvfn"]
 [ext_resource type="Script" uid="uid://lkblthkc5ll4" path="res://scripts/player/equippable_item_holder.gd" id="3_68xwl"]
 [ext_resource type="Script" uid="uid://4wkk0eww7bag" path="res://scripts/game/inventory_manager.gd" id="3_u3rb4"]
 [ext_resource type="Script" uid="uid://dsbitqevrtlw6" path="res://scripts/game/equipped_item_manager.gd" id="4_nybob"]
@@ -21,7 +22,9 @@ shape = SubResource("CapsuleShape3D_s3bbx")
 [node name="Head" type="Node3D" parent="." unique_id=831664791]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5608837, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=802713022]
+[node name="MainCamera" type="Camera3D" parent="Head" unique_id=802713022]
+cull_mask = 1048573
+script = ExtResource("2_wwvfn")
 
 [node name="InteractionRayCast" type="RayCast3D" parent="Head" unique_id=2096838101]
 target_position = Vector3(0, 0, -2)
@@ -29,7 +32,27 @@ collision_mask = 4
 collide_with_areas = true
 script = ExtResource("2_dd427")
 
-[node name="EquippableItemHolder" type="Node3D" parent="Head" unique_id=913057223]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Head" unique_id=1188998985]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Head/SubViewportContainer" unique_id=4097619]
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(2560, 1600)
+render_target_update_mode = 4
+
+[node name="EquippableItemCamera" type="Camera3D" parent="Head/SubViewportContainer/SubViewport" unique_id=668362617]
+unique_name_in_owner = true
+cull_mask = 1048574
+
+[node name="EquippableItemHolder" type="Node3D" parent="Head/SubViewportContainer/SubViewport/EquippableItemCamera" unique_id=913057223]
+unique_name_in_owner = true
 script = ExtResource("3_68xwl")
 
 [node name="Managers" type="Node" parent="." unique_id=1783182741]

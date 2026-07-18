@@ -8,5 +8,5 @@ script = ExtResource("2_46eor")
 item_key = 5
 display_name = "Log"
 icon = ExtResource("1_imfpr")
-description = "Can be used for timber for a fire!"
+description = "A stury log."
 metadata/_custom_type_script = "uid://c412qpdpv0wl4"
