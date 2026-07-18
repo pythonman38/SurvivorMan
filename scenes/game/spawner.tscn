@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://u6aw465luboi"]
+
+[ext_resource type="Script" uid="uid://d0iymhpmkp42t" path="res://scripts/game/spawner.gd" id="1_apy4e"]
+
+[node name="Spawner" type="Node3D" unique_id=779956073]
+script = ExtResource("1_apy4e")
+
+[node name="Items" type="Node3D" parent="." unique_id=401020278]

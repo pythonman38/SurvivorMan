@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dhxgg5xo1duje"]
 
-[ext_resource type="Texture2D" uid="uid://lbv1vxcmb4av" path="res://assets/textures/item_icons/coal.png" id="1_uwl83"]
+[ext_resource type="Texture2D" uid="uid://ck8pd2eqqlu23" path="res://assets/textures/item_icons/fruit.png" id="1_wbnpr"]
 [ext_resource type="Script" uid="uid://c412qpdpv0wl4" path="res://scripts/resources/items/item_resource.gd" id="2_05dtg"]
 
 [resource]
 script = ExtResource("2_05dtg")
-item_key = 6
-display_name = "Coal"
-icon = ExtResource("1_uwl83")
-description = "This coal could be good for starting a fire."
+item_key = 4
+display_name = "Fruit"
+icon = ExtResource("1_wbnpr")
+description = "A healthy snack!"
 metadata/_custom_type_script = "uid://c412qpdpv0wl4"
