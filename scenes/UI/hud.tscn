@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b5jfgl5pa7jwh" path="res://assets/textures/circle32.png" id="1_c4vmg"]
 [ext_resource type="PackedScene" uid="uid://0tg05cx2ubq7" path="res://scenes/UI/custom_nodes/hotbar_slot.tscn" id="2_rd3kb"]
 [ext_resource type="Script" uid="uid://ioqq53ejvqyy" path="res://scripts/UI/hotbar_ui.gd" id="2_y5tme"]
+[ext_resource type="Script" uid="uid://bl2ik7wfx86m6" path="res://scripts/UI/player_stats_container.gd" id="4_0jeyp"]
+[ext_resource type="Texture2D" uid="uid://d1pu1ywicscqc" path="res://assets/textures/square32.png" id="4_18exe"]
 
 [node name="HUD" type="Control" unique_id=542212111]
 layout_mode = 3
@@ -74,3 +76,20 @@ layout_mode = 2
 
 [node name="HotbarSlot9" parent="MarginContainer/HotbarSlotBoxContainer" unique_id=1410596294 instance=ExtResource("2_rd3kb")]
 layout_mode = 2
+
+[node name="PlayerStatsContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1027810563]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+script = ExtResource("4_0jeyp")
+
+[node name="EnergyBar" type="TextureProgressBar" parent="MarginContainer/PlayerStatsContainer" unique_id=688948708]
+custom_minimum_size = Vector2(450, 64)
+layout_mode = 2
+step = 0.1
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("4_18exe")
+texture_progress = ExtResource("4_18exe")
+tint_under = Color(0.20392157, 0.20392157, 0.20392157, 1)
+tint_progress = Color(1, 0.7607843, 0.36078432, 1)
