@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c2ubsgicfxlkg"]
 
 [ext_resource type="PackedScene" uid="uid://byvndpqcfv7cl" path="res://assets/meshes/terrain.tscn" id="1_fu7o2"]
-[ext_resource type="PackedScene" uid="uid://dfue1h6nvt6j8" path="res://assets/meshes/mushroom.tscn" id="3_jvvx5"]
 [ext_resource type="PackedScene" uid="uid://i4tg4r0vocho" path="res://scenes/items/interactables/pickupable_stick.tscn" id="4_58o1d"]
 [ext_resource type="PackedScene" uid="uid://138hs01soytg" path="res://scenes/items/interactables/pickupable_stone.tscn" id="5_8rgn5"]
 [ext_resource type="PackedScene" uid="uid://do8njll40umhp" path="res://scenes/items/interactables/pickupable_plant.tscn" id="6_grrfr"]
 [ext_resource type="PackedScene" uid="uid://hvlh03fofcup" path="res://scenes/game/player.tscn" id="7_qssai"]
+[ext_resource type="PackedScene" uid="uid://oh7p7shopytf" path="res://scenes/items/interactables/pickupable_mushroom.tscn" id="8_58o1d"]
 [ext_resource type="PackedScene" uid="uid://u6aw465luboi" path="res://scenes/game/spawner.tscn" id="8_74apg"]
 [ext_resource type="PackedScene" uid="uid://dumdky6nyeng5" path="res://scenes/objects/hittables/hittable_tree.tscn" id="8_jvvx5"]
 
@@ -43,18 +43,6 @@ collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D" unique_id=297226968]
 shape = SubResource("ConcavePolygonShape3D_0rdsr")
-
-[node name="Mushroom" parent="." unique_id=1119368525 instance=ExtResource("3_jvvx5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-
-[node name="Mushroom2" parent="." unique_id=2002326609 instance=ExtResource("3_jvvx5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
-
-[node name="Mushroom3" parent="." unique_id=1733208845 instance=ExtResource("3_jvvx5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
-
-[node name="Mushroom4" parent="." unique_id=977677272 instance=ExtResource("3_jvvx5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
 
 [node name="Water" type="MeshInstance3D" parent="." unique_id=1785447596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.0753374, 0)
@@ -102,3 +90,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 
 [node name="HittableTree4" parent="." unique_id=1655397224 instance=ExtResource("8_jvvx5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="PickupableMushroom" parent="." unique_id=1893648072 instance=ExtResource("8_58o1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PickupableMushroom2" parent="." unique_id=477417384 instance=ExtResource("8_58o1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PickupableMushroom3" parent="." unique_id=196031767 instance=ExtResource("8_58o1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PickupableMushroom4" parent="." unique_id=682437600 instance=ExtResource("8_58o1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)

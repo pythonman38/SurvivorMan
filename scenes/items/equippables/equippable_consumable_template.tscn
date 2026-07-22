@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://mro3rsivr37c"]
+
+[ext_resource type="PackedScene" uid="uid://bgepl4dudp3ug" path="res://scenes/items/equippables/equippable_item_template.tscn" id="1_53ac8"]
+[ext_resource type="Script" uid="uid://dnhj0pr2pys" path="res://scripts/items/equippables/equippable_consumable.gd" id="2_smjnv"]
+
+[node name="EquippableConsumableTemplate" unique_id=1535181218 instance=ExtResource("1_53ac8")]
+script = ExtResource("2_smjnv")

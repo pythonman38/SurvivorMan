@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://oh7p7shopytf"]
+
+[ext_resource type="PackedScene" uid="uid://3a0gto2asbo2" path="res://scenes/items/interactables/pickupable_template.tscn" id="1_5546h"]
+[ext_resource type="PackedScene" uid="uid://dfue1h6nvt6j8" path="res://assets/meshes/mushroom.tscn" id="2_5546h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h7b5h"]
+size = Vector3(0.25769234, 0.23388672, 0.2772522)
+
+[node name="PickupableMushroom" unique_id=1510676806 instance=ExtResource("1_5546h")]
+
+[node name="Pickupable" parent="." index="0" unique_id=678589974]
+item_key = 3
+prompt = "Pickup mushroom"
+
+[node name="CollisionShape3D" parent="Pickupable" index="0" unique_id=415797282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027284622, 0.10913086, -0.0019378662)
+shape = SubResource("BoxShape3D_h7b5h")
+
+[node name="Mushroom" parent="." index="1" unique_id=1119368525 instance=ExtResource("2_5546h")]
